@@ -17,6 +17,7 @@ dependencies:
   flutter_localizations:
     sdk: flutter
     version: ^0.0.0
+  dots_indicator: ^2.1.0
 
 dev_dependencies:
   flutter_test:
@@ -27,5 +28,25 @@ dev_dependencies:
 flutter:
   uses-material-design: true
   assets:
-    - assets/images/animation.png
     - assets/images/vimigo.gif
+    - assets/images/4380.png
+    - assets/images/ss_overview.png
+    - assets/images/ss_contact.png
+    - assets/images/ss_add_contact.png
+    - assets/images/ss_filter.png
+    - assets/images/ss_sort_asc.png
+    - assets/images/ss_sort_desc.png
+
+  fonts:
+    - family: Poppins
+      fonts:
+        - asset: assets/font/Poppins-Light.ttf
+          weight: 300
+        - asset: assets/font/Poppins-Regular.ttf
+          weight: 400
+    - family: Akshar
+      fonts:
+        - asset: assets/font/Akshar-Regular.ttf
+          weight: 400
+        - asset: assets/font/Akshar-SemiBold.ttf
+          weight: 600

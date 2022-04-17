@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:vimigotest/screen/overview_screen.dart';
+import 'package:vimigotest/screen/user_guideline_screen.dart';
 
 class OnboardingScreen extends StatelessWidget {
   const OnboardingScreen({Key? key}) : super(key: key);
@@ -14,12 +15,27 @@ class OnboardingScreen extends StatelessWidget {
           direction: Axis.vertical,
           children: [
             Expanded(
-              child: Container(),
+              child: Column(
+                mainAxisAlignment: MainAxisAlignment.end,
+                children: [
+                  Padding(
+                    padding: const EdgeInsets.symmetric(vertical: 40.0),
+                    child: Image.asset(
+                      'assets/images/4380.png',
+                      height: deviceSize.height * 0.3,
+                    ),
+                  ),
+                  const Text(
+                    'Welcome!',
+                    style: TextStyle(fontSize: 28, letterSpacing: 2),
+                  ),
+                ],
+              ),
             ),
             Padding(
               padding: EdgeInsets.symmetric(
                   horizontal: deviceSize.width * 0.1,
-                  vertical: deviceSize.height * 0.04),
+                  vertical: deviceSize.height * 0.13),
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
@@ -65,8 +81,8 @@ class OnboardingScreen extends StatelessWidget {
                       ),
                     ),
                     onPressed: () {
-                      Navigator.pushReplacementNamed(
-                          context, OverviewScreen.routeName);
+                      Navigator.pushNamed(
+                          context, UserGuidelineScreen.routeName);
                     },
                   ),
                 ],
